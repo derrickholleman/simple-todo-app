@@ -1,15 +1,22 @@
 import React from "react";
 import { updateCompleted } from "./utils/api";
 
-const Todo = ({ todo, handleDelete, loadTodos }) => {
+const Todo = ({
+  todo,
+  handleDelete,
+  loadTodos,
+  handleMoveDown,
+  handleMoveUp,
+}) => {
   const handleCompleted = () => {
-    updateCompleted(todo, todo.id).then(loadTodos)
+    updateCompleted(todo, todo.id).then(loadTodos);
   };
+
   return (
     <div>
       <ul>
         <li className="todo">
-          <p className="todo-text">{todo.text}</p>
+          <h2 className="todo-text">{todo.text}</h2>
           {todo.isCompleted ? (
             <p className="completed">Completed</p>
           ) : (
@@ -18,6 +25,11 @@ const Todo = ({ todo, handleDelete, loadTodos }) => {
           <button onClick={handleDelete} className="delete-btn">
             X
           </button>
+          <h3>Re Order Todo</h3>
+          <div className="reorder-btns">
+            <button onClick={handleMoveUp}>Up</button>
+            <button onClick={handleMoveDown}>Down</button>
+          </div>
         </li>
       </ul>
     </div>

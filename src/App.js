@@ -37,6 +37,30 @@ function App() {
     deleteTodo(id).then(loadTodos);
   };
 
+  const handleMoveDown = (index) => {
+    if (index + 1 === todos.length) {
+      return null
+    }
+    let temp = todos[index];
+    todos[index] = todos[index + 1];
+    todos[index + 1] = temp;
+
+    setTodos((todos) => [...todos])
+
+  };
+
+  const handleMoveUp = (index) => {
+    if (index === 0) {
+      return null
+    }
+    let temp = todos[index];
+    todos[index] = todos[index - 1];
+    todos[index - 1] = temp;
+
+    setTodos((todos) => [...todos])
+
+  };
+
   return (
     <div className="App">
       <h1>Simple Todo App</h1>
@@ -54,12 +78,16 @@ function App() {
         <input type="submit" style={{ display: "none" }} />
       </form>
 
-      {todos.map((todo) => (
+      {todos.map((todo, index) => (
         <Todo
           key={todo.id}
           todo={todo}
           handleDelete={() => handleDelete(todo.id)}
           loadTodos={loadTodos}
+          todos={todos}
+          setTodos={setTodos}
+          handleMoveDown={() => handleMoveDown(index)}
+          handleMoveUp={() => handleMoveUp(index)}
         />
       ))}
     </div>

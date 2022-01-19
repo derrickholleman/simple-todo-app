@@ -1,24 +1,14 @@
 {
   "todos": [
     {
-      "text": "hello",
-      "isCompleted": true,
-      "id": 4
-    },
-    {
-      "text": "wash the car",
-      "isCompleted": true,
-      "id": 8
-    },
-    {
-      "text": "test",
+      "text": "yes",
       "isCompleted": false,
-      "id": 9
+      "id": 1
     },
     {
-      "text": "congrats!",
-      "isCompleted": true,
-      "id": 10
+      "text": "no!",
+      "isCompleted": false,
+      "id": 2
     }
   ]
 }
