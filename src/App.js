@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import { getTodos, createTodo, deleteTodo } from "./utils/api";
 import Todo from "./Todo";
 import "./App.css";
-import { v4 as uuidv4 } from "uuid";
 
 const initialFormState = {
-  id: uuidv4(),
   text: "",
   isCompleted: false,
 };
@@ -31,9 +29,8 @@ function App() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    createTodo(formData)
+    createTodo(formData).then(loadTodos);
     setFormData({ ...initialFormState });
-    window.location.reload(false);
   };
 
   const handleDelete = (id) => {
