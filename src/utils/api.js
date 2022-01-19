@@ -11,7 +11,7 @@ export async function getTodos() {
 
 export async function createTodo(newTodo) {
   try {
-    const res = await fetch(BASE_URL, {
+    return await fetch(BASE_URL, {
       method: "POST",
       headers: {
         Accept: "application/json",
@@ -19,7 +19,6 @@ export async function createTodo(newTodo) {
       },
       body: JSON.stringify(newTodo),
     });
-    console.log(res)
   } catch (err) {
     console.log('hello')
     console.error(err);

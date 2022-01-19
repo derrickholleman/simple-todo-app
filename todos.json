@@ -6,9 +6,19 @@
       "id": 4
     },
     {
+      "text": "wash the car",
+      "isCompleted": true,
+      "id": 8
+    },
+    {
       "text": "test",
       "isCompleted": false,
-      "id": 7
+      "id": 9
+    },
+    {
+      "text": "congrats!",
+      "isCompleted": true,
+      "id": 10
     }
   ]
 }

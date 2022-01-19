@@ -49,6 +49,7 @@ function App() {
           required
           value={formData.text}
           onChange={handleChange}
+          placeholder="today I need to..."
         />
         <input type="submit" style={{ display: "none" }} />
       </form>
