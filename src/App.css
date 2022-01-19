@@ -1,3 +1,69 @@
 .App {
   text-align: center;
 }
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin: 2rem auto;
+  border: 1px solid black;
+  width: 50%;
+  padding: 1rem 0;
+  border-radius: 10px;
+}
+
+form {
+  margin-top: 1rem;
+}
+label {
+  margin-right: 0.5rem;
+}
+input {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+}
+
+button {
+  width: 100px;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  margin: 1rem auto 0 auto;
+  border-radius: 10px;
+  border-color: black;
+  background-color: green;
+  color: white;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgba(0, 128, 0, 0.842);
+}
+
+.completed {
+  margin-top: 1rem;
+}
+
+.delete-btn {
+  background-color: transparent;
+  color: red;
+  border: none;
+  font-size: 1.5rem;
+  position: absolute;
+  top: -20px;
+  right: -5px;
+  width: max-content;
+}
+.delete-btn:hover {
+  background-color: transparent;
+}

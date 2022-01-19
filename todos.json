@@ -1,19 +1,14 @@
 {
   "todos": [
     {
-      "id": 1,
-      "text": "todo 1",
+      "id": "0eeafb33-8cd2-4d69-8a64-28ae3d805658",
+      "text": "yes",
       "isCompleted": false
     },
     {
-      "id": 2,
-      "text": "todo 2",
+      "id": "37e1c85e-eca1-428f-a4ae-37c0b6bc32db",
+      "text": "ok",
       "isCompleted": false
-    },
-    {
-      "id": 3,
-      "text": "todo 3",
-      "isCompleted": true
     }
   ]
 }
