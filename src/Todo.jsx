@@ -9,7 +9,7 @@ const Todo = ({ todo, handleDelete, loadTodos }) => {
     <div>
       <ul>
         <li className="todo">
-          <p>{todo.text}</p>
+          <p className="todo-text">{todo.text}</p>
           {todo.isCompleted ? (
             <p className="completed">Completed</p>
           ) : (

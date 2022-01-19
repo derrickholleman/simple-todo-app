@@ -52,7 +52,6 @@ function App() {
           required
           value={formData.text}
           onChange={handleChange}
-          maxLength="35"
         />
         <input type="submit" style={{ display: "none" }} />
       </form>
